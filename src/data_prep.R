@@ -37,7 +37,7 @@ print(paste0("Keeping ", sum(keepGenes)," of ", nrow(cpm)," genes."))
 # It is easier to interpret them if they are named with their gene symbol. The biomaRt package can be used.
 
 # get an object that references the relevant biomart database (human gene names)
-ensembl <- useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl")
+ensembl <- useEnsembl(biomart = "genes", dataset = "hsapiens_gene_ensembl", version="115")
 
 # # Could specify which version of the ensembl gene names for better reproducibility?
 # # Some gene names changed over time (with new research, 
